@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Width Image Header</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Aligns text to the top */
+            color: white;
+            text-align: center;
+            font-size: 36px;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 20px; /* Adds some space from the top */
+            box-sizing: border-box; /* Ensures padding does not affect overall size */
+        }
+        .small-image {
+            position: absolute;
+            bottom: 1750px; /* Adjusts the position from the bottom */
+            right: 40px; /* Adjusts the position from the left */
+            width: 35%; /* Adjusts the width of the smaller image */
+            height: auto;
+            z-index: 1; /* Ensures the smaller image is above the second header image */
+        }
+        .additional-image {
+            position: absolute;
+            bottom: 1750px; /* Adjusts the position from the bottom */
+            left: 40px; /* Adjusts the position from the left */
+            width: 35%; /* Adjusts the width of the smaller image */
+            height: auto;
+            z-index: 2; /* Ensures this image is above all others */
+        }
+        .center-image {
+            position: absolute;
+            top: 60%; /* Centers the image vertically */
+            left: 20%; /* Centers the image horizontally */
+            transform: translate(-50%, -50%); /* Adjusts the position to center */
+            width: 50%; /* Adjusts the width of the centered image */
+            height: auto;
+            z-index: 3; /* Ensures this image is above all others */
+        }
+        .text-below {
+            position: absolute;
+            bottom: 1700px; /* Adjusts the position from the bottom */
+            right: 40px; /* Adjusts the position from the left */
+            font-family: 'Lato', sans-serif;
+            font-size: 25px; /* Adjusted font size */
+            color: white;
+            text-align: right;
+            white-space: nowrap; /* Prevents text from wrapping */
+        }
+        .additional-text {
+            position: absolute;
+            bottom: 1700px; /* Adjusts the position from the bottom */
+            left: 75px; /* Adjusts the position from the left */
+            font-family: 'Lato', sans-serif;
+            font-size: 25px; /* Font size */
+            color: white;
+            text-align: right;
+            white-space: nowrap; /* Prevents text from wrapping */
+        }
+        .red-text {
+            position: absolute;
+            bottom: 1250px; /* Adjusted position from the bottom */
+            left: 250px; /* Adjusts the position from the left */
+            width: calc(100% - 300px); /* Adjusts the width of the text */
+            font-family: 'Lato', sans-serif;
+            font-size: 25px; /* Font size */
+            color: rgb(247, 247, 247); /* Red color */
+            text-align: center; /* Centers the text */
+            z-index: 4; /* Ensures this text is above all others */
+        }
+        .blue-line {
+            width: 100%;
+            height: 500px;
+            background-color: #003366; /* Darkened blue */
+            position: relative;
+            margin-top: 20px; /* Adds space above the blue line */
+        }
+        .red-line {
+            width: 100%;
+            height: 500px;
+            background-color: #660000; /* Darkened red */
+            position: relative;
+            margin-top: 20px; /* Adds space above the red line */
+        }
+        .small-transparent-image {
+            position: absolute;
+            bottom: 550px; /* Adjust as needed */
+            left: 84%; /* Center horizontally with respect to the parent */
+            transform: translateX(-50%); /* Center alignment correction */
+            width: 30%; /* Adjust width as needed */
+            height: auto;
+            z-index: 5; /* Ensures this image is above all others */
+        }
+        /* New blue text style */
+        .blue-text {
+            font-family: 'Lato', sans-serif;
+            font-size: 25px; /* Text size set to 20px */
+            color: #ffffff; /* Text color */
+            position: absolute;
+            bottom: 650px; /* Adjust this value to move the text further down */
+            left: 35%;
+            transform: translateX(-50%);
+            margin-bottom: 20px;
+            z-index: 9999;
+            width: 100%;
+            text-align: center;
+        }
+        /* White text covering everything */
+        .white-text {
+            font-family: 'Lato', sans-serif;
+            font-size: 35px;
+            color: white;
+            position: absolute;
+            bottom: 200px; /* Position the text at the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000; /* Highest z-index to ensure it's on top */
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+        }
+        /* New 'posledni' image */
+        .last-image {
+            position: absolute;
+            bottom: 0; /* Places it at the bottom */
+            left: -50px;
+            width: 50%; /* Full width */
+            height: auto;
+            z-index: 10001; /* Higher z-index to overlay everything */
+        }
+    </style>
+</head>
+<body>
+    <img src="skibidi toilet.png" alt="First Header Image" class="header-image">
+    <img src="ahojda.png" alt="Second Header Image" class="header-image">
+    <img src="pravnikjedna.png" alt="Smaller Overlay Image" class="small-image"> <!-- Smaller image added -->
+    <img src="pravnikdva.png" alt="Additional Overlay Image" class="additional-image"> <!-- New overlay image -->
+    <img src="modros.png" alt="Centered Image" class="center-image"> <!-- Centered image without background -->
+    <div class="overlay">
+        <div>
+            <h1>⚖️Jasper Moody⚖️</h1>
+            <p>Nejlepší, nejinteligentnější, nejhezčí,<br>právník v celém San Andreas</p>
+            <p>Právník co vás dostane<br>⚖️Z BASY VEN⚖️</p>
+        </div>
+    </div>
+    <div class="text-below">NEPLAT'TE ŠKODY ZA KTERÉ NEMŮŽETE!</div>
+    <div class="additional-text">NECHOD'TE DO BASY ZBYTENĚ!</div>
+    <div class="red-text">Jmenuji se Japser Moody, nejličtější právník,<br> u kterého jsou na prvním místě klienti,<br> a až na druhém profesionalita. Udělám vše proto abych vás dostal Z BASY VEN,<br>  jsem ten nejrozumnější nejbystřejší, nejhezčí, nejaktivnější,<br> a nejprofesionálnější právník v San Andreas. Který je tu pro VÁS.
+    </div> <!-- Added red text -->
+    <!-- New blue text added above red-line -->
+    <div class="blue-text">Peníze, kdo by jich neměl dost. A proto vím že cena je u většiny důležitá.<br> Proto nemám přesný ceník.<br> Ale každý případ se liší v tom, jak bude náročný.  Cenu můžu navrhnout hned u úvodní schůzi.<br> A pokud vám nebude vyhovovat, nic neplatíte!<br> Ale nic co by si normální člověk nemohl dovolit!
+    </div>
+    <div class="blue-line"></div>
+    <div class="red-line"></div>
+    <img src="halmigna.png" alt="Additional Image" class="header-image"> <!-- Additional image added -->
+    <img src="prachy.png" alt="Transparent Background Image" class="small-transparent-image"> <!-- New transparent image added -->
+    
+    <!-- New white text added -->
+    <div class="white-text">
+        ZAUJAL JSEM TĚ?!<BR>
+            ⚖️Tak mě kontaktuj okamžitě⚖️<br>
+            Telefoní čílo: 741-915<br>
+            Post: jasper.moody@post.ic
+    </div>
+    <!-- Last image with transparent background -->
+    <img src="cerven.png" alt="Last Image with Transparent Background" class="last-image">
+</body>
+</html>
